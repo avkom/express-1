@@ -1,6 +1,9 @@
 const express = require('express');
+const things = require('./things');
 
 const app = express();
+
+app.use('/things', things);
 
 app.get('/hello', (req, res) => {
     res.send('Hello, World!');
