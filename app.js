@@ -1,21 +1,19 @@
 const express = require('express');
-const things = require('./things');
 
 const app = express();
+app.set('view engine', 'pug');
+app.set('views', './views');
 
-app.use('/', (req, res, next) => {
-    console.log('Before 1');
-    next();
-    console.log('After 1');
+app.get('/first_template', (req, res) => {
+    res.render('first_view');
 });
 
-app.get('/', (req, res, next) => {
-    res.send('2');
-    next();
-});
-
-app.use('/', (req, res) => {
-    console.log('3');
+app.get('/dynamic_template', (req, res) => {
+    const options = {
+        name: 'GitHub',
+        url: 'http://github.com/'
+    };
+    res.render('dynamic', options);
 });
 
 module.exports = app;
