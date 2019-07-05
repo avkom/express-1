@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Node.js/Express.js application",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avkom/express-1.git"
+  },
+  "author": "Oleksandr Komendant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avkom/express-1/issues"
+  },
+  "homepage": "https://github.com/avkom/express-1#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
