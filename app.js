@@ -16,4 +16,8 @@ app.get('/dynamic_template', (req, res) => {
     res.render('dynamic', options);
 });
 
+app.get('/components', (req, res) => {
+    res.render('content');
+});
+
 module.exports = app;
